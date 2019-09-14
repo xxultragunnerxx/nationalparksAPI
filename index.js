@@ -5,7 +5,7 @@ function main() {
     let numOfParks = $('#of-parks').val();
     getParkInfo(stateName, numOfParks);
   });
-  
+
 }
 
 function getParkInfo(stateName, numOfParks) {
@@ -34,9 +34,13 @@ function displayResults (responseJson) {
   $('.search-results').empty();
   responseJson.data.forEach((data) => {
   $('.search-results').append(`
-        <div>${data.fullName}</div>  
-        <div>${data.description}</div>
-        <div>${data.url}</div>
+    <ul>
+      <li>
+        <h2>${data.fullName}</h2>
+        <p>${data.description}</p>
+        <span><a href="${data.url}"${data.url}</a></span>
+      </li>
+    </ul>
      `)
   })
 
