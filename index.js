@@ -34,13 +34,11 @@ function displayResults (responseJson) {
   $('.search-results').empty();
   responseJson.data.forEach((data) => {
   $('.search-results').append(`
-    <ul>
       <li>
         <h2>${data.fullName}</h2>
         <p>${data.description}</p>
         <span><a href="${data.url}"${data.url}</a></span>
       </li>
-    </ul>
      `)
   })
 
