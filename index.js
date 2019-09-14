@@ -37,7 +37,7 @@ function displayResults (responseJson) {
       <li>
         <h2>${data.fullName}</h2>
         <p>${data.description}</p>
-        <span><a href="${data.url}"${data.url}</a></span>
+        <a href="${data.url}">Visit Website</a>
       </li>
      `)
   })
